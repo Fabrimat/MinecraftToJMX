@@ -1,0 +1,4 @@
+name: SparkToJMX
+main: me.fabrimat.sparktojmx.bungee.SparkToJMXBungee
+version: 0.1
+author: Fabrimat
