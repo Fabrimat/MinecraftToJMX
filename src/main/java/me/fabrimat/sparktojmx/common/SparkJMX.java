@@ -1,10 +1,7 @@
 package me.fabrimat.sparktojmx.common;
 
-import org.bukkit.Bukkit;
-
 import javax.management.*;
 import java.lang.reflect.Constructor;
-import java.util.logging.Level;
 
 public class SparkJMX implements SparkJMXMXBeans {
     // internal variables describing the MBean
@@ -25,37 +22,37 @@ public class SparkJMX implements SparkJMXMXBeans {
 
     @Override
     public double getTpsLast5Secs() {
-        return sparkAdapter.getTPS().last5Sec;
+        return sparkAdapter.getTPS().getLast5Sec();
     }
 
     @Override
     public double getTpsLast10Secs() {
-        return sparkAdapter.getTPS().last10Sec;
+        return sparkAdapter.getTPS().getLast10Sec();
     }
 
     @Override
     public double getTpsLast1Min() {
-        return sparkAdapter.getTPS().last1Min;
+        return sparkAdapter.getTPS().getLast1Min();
     }
 
     @Override
     public double getTpsLast5Min() {
-        return sparkAdapter.getTPS().last5Min;
+        return sparkAdapter.getTPS().getLast5Min();
     }
 
     @Override
     public double getTpsLast15Min() {
-        return sparkAdapter.getTPS().last15Min;
+        return sparkAdapter.getTPS().getLast15Min();
     }
 
     @Override
     public double getMSPTLast10Secs() {
-        return sparkAdapter.getMSPT().last10Sec;
+        return sparkAdapter.getMSPT().getLast10Sec();
     }
 
     @Override
     public double getMSPTLast1Min() {
-        return sparkAdapter.getMSPT().last1Min;
+        return sparkAdapter.getMSPT().getLast1Min();
     }
 
     @Override
