@@ -12,7 +12,7 @@ public class BeamServerBungeeManager {
     public static void registerBungee() throws MalformedObjectNameException, NotCompliantMBeanException, MBeanRegistrationException, InstanceAlreadyExistsException, InstanceNotFoundException {
         MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
 
-        ObjectName mxbeanName = new ObjectName("me.fabrimat.sparktojmx:type=BukkitJMX");
+        ObjectName mxbeanName = new ObjectName("me.fabrimat.sparktojmx:type=BungeeJMX");
 
         BungeeJMX bungeeJMX = new BungeeJMX();
         if(mbs.isRegistered(mxbeanName)) {
