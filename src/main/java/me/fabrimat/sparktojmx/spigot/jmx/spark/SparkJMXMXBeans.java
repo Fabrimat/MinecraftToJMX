@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.common;
+package me.fabrimat.sparktojmx.spigot.jmx.spark;
 
 import javax.management.DynamicMBean;
 

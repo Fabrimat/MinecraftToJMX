@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.common;
+package me.fabrimat.sparktojmx.spigot.jmx.spark;
 
 import javax.management.*;
 import java.lang.reflect.Constructor;
@@ -100,7 +100,7 @@ public class SparkJMX implements SparkJMXMXBeans {
     // internal method
     private void buildDynamicMBeanInfo() {
 
-        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.sparktojmx.common.SparkJMXMXBeans", "mxbean=true");
+        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.sparktojmx.spigot.jmx.spark.SparkJMXMXBeans", "mxbean=true");
 
         dAttributes[0] = new MBeanAttributeInfo(
                 "TpsLast5Sec",                 // name
