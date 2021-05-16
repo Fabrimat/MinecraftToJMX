@@ -14,6 +14,8 @@ Name: `me.fabrimat.minecrafttojmx:type=BukkitJMX`
 | WorldChunkLoaded  | int | Total amount of chunks loaded in the server. |
 | WorldEntities  | int | Total amount of entities loaded in the server. |
 ### Spark Beam
+Requires [Spark](https://github.com/lucko/spark)
+
 Name: `me.fabrimat.minecrafttojmx:type=SparkJMX`
 
 | Name | Type |
