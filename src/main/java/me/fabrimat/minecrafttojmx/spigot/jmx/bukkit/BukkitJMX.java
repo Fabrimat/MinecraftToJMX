@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.spigot.jmx.bukkit;
+package me.fabrimat.minecrafttojmx.spigot.jmx.bukkit;
 
 import javax.management.*;
 import java.lang.reflect.Constructor;
@@ -61,7 +61,7 @@ public class BukkitJMX implements BukkitJMXMXBeans {
     // internal method
     private void buildDynamicMBeanInfo() {
 
-        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.sparktojmx.spigot.jmx.bukkit.BukkitJMXMXBeans", "mxbean=true");
+        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.minecrafttojmx.spigot.jmx.bukkit.BukkitJMXMXBeans", "mxbean=true");
 
         dAttributes[0] = new MBeanAttributeInfo(
                 "OnlinePlayers",                 // name

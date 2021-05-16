@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.bungee.jmx.bungee;
+package me.fabrimat.minecrafttojmx.bungee.jmx.bungee;
 
 import javax.management.*;
 import java.lang.reflect.Constructor;
@@ -53,7 +53,7 @@ public class BungeeJMX implements BungeeJMXMXBeans {
     // internal method
     private void buildDynamicMBeanInfo() {
 
-        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.sparktojmx.bungee.jmx.bungee.BungeeJMXMXBeans", "mxbean=true");
+        Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.minecrafttojmx.bungee.jmx.bungee.BungeeJMXMXBeans", "mxbean=true");
 
         dAttributes[0] = new MBeanAttributeInfo(
                 "ConnectedPlayers",                 // name

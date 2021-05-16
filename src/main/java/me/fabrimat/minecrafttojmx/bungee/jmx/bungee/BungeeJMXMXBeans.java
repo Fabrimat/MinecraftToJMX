@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.bungee.jmx.bungee;
+package me.fabrimat.minecrafttojmx.bungee.jmx.bungee;
 
 import javax.management.DynamicMBean;
 

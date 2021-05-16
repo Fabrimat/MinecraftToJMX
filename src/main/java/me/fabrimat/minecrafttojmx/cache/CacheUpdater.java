@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.cache;
+package me.fabrimat.minecrafttojmx.cache;
 
 public interface CacheUpdater {
     void updateCacheAsync();

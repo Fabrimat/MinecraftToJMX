@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.spigot.jmx.bukkit;
+package me.fabrimat.minecrafttojmx.spigot.jmx.bukkit;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;

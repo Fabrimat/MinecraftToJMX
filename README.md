@@ -1,1 +1,1 @@
-# SparkToJMX
+# MinecraftToJMX

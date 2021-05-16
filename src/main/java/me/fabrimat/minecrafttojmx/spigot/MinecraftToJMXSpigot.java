@@ -1,9 +1,9 @@
-package me.fabrimat.sparktojmx.spigot;
+package me.fabrimat.minecrafttojmx.spigot;
 
-import me.fabrimat.sparktojmx.cache.CacheUpdater;
-import me.fabrimat.sparktojmx.spigot.jmx.BeamServerBukkitManager;
-import me.fabrimat.sparktojmx.spigot.jmx.bukkit.BukkitAdapter;
-import me.fabrimat.sparktojmx.spigot.jmx.spark.SparkAdapter;
+import me.fabrimat.minecrafttojmx.cache.CacheUpdater;
+import me.fabrimat.minecrafttojmx.spigot.jmx.BeamServerBukkitManager;
+import me.fabrimat.minecrafttojmx.spigot.jmx.bukkit.BukkitAdapter;
+import me.fabrimat.minecrafttojmx.spigot.jmx.spark.SparkAdapter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import javax.management.*;
 import java.util.logging.Level;
 
-public class SparkToJMXSpigot extends JavaPlugin implements CacheUpdater {
+public class MinecraftToJMXSpigot extends JavaPlugin implements CacheUpdater {
 
     private boolean spark = false;
 

@@ -1,5 +1,5 @@
-name: SparkToJMX
-main: me.fabrimat.sparktojmx.spigot.SparkToJMXSpigot
+name: MinecraftToJMX
+main: me.fabrimat.minecrafttojmx.spigot.MinecraftToJMXSpigot
 version: 0.2
 author: Fabrimat
 softdepend: [spark]

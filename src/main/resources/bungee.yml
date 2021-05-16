@@ -1,4 +1,4 @@
-name: SparkToJMX
-main: me.fabrimat.sparktojmx.bungee.SparkToJMXBungee
+name: MinecraftToJMX
+main: me.fabrimat.minecrafttojmx.bungee.MinecraftToJMXBungee
 version: 0.2
 author: Fabrimat

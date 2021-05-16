@@ -1,4 +1,4 @@
-package me.fabrimat.sparktojmx.spigot.jmx.spark;
+package me.fabrimat.minecrafttojmx.spigot.jmx.spark;
 
 import com.google.common.util.concurrent.AtomicDouble;
 import me.lucko.spark.api.Spark;

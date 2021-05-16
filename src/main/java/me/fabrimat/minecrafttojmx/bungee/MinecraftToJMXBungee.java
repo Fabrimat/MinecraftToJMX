@@ -1,14 +1,14 @@
-package me.fabrimat.sparktojmx.bungee;
+package me.fabrimat.minecrafttojmx.bungee;
 
-import me.fabrimat.sparktojmx.bungee.jmx.BeamServerBungeeManager;
-import me.fabrimat.sparktojmx.bungee.jmx.bungee.BungeeAdapter;
-import me.fabrimat.sparktojmx.cache.CacheUpdater;
+import me.fabrimat.minecrafttojmx.bungee.jmx.BeamServerBungeeManager;
+import me.fabrimat.minecrafttojmx.bungee.jmx.bungee.BungeeAdapter;
+import me.fabrimat.minecrafttojmx.cache.CacheUpdater;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import javax.management.*;
 import java.util.concurrent.TimeUnit;
 
-public class SparkToJMXBungee extends Plugin implements CacheUpdater {
+public class MinecraftToJMXBungee extends Plugin implements CacheUpdater {
 
     @Override
     public void onEnable() {

@@ -1,7 +1,6 @@
-package me.fabrimat.sparktojmx.bungee.jmx.bungee;
+package me.fabrimat.minecrafttojmx.bungee.jmx.bungee;
 
 import org.bukkit.Bukkit;
-import org.bukkit.World;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
