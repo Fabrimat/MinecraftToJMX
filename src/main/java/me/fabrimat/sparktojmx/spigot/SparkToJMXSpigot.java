@@ -5,6 +5,7 @@ import me.fabrimat.sparktojmx.spigot.jmx.BeamServerBukkitManager;
 import me.fabrimat.sparktojmx.spigot.jmx.bukkit.BukkitAdapter;
 import me.fabrimat.sparktojmx.spigot.jmx.spark.SparkAdapter;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.management.*;
@@ -12,19 +13,28 @@ import java.util.logging.Level;
 
 public class SparkToJMXSpigot extends JavaPlugin implements CacheUpdater {
 
+    private boolean spark = false;
+
     @Override
     public void onEnable() {
         super.onEnable();
 
-        try {
-            Class.forName("me.lucko.spark.api.Spark");
-        } catch (ClassNotFoundException e) {
-            getLogger().log(Level.SEVERE, "You are using a corrupted version of Spark. Please download it from the official website.");
-            e.printStackTrace();
+        Plugin sparkPlugin = Bukkit.getPluginManager().getPlugin("spark");
+        if(sparkPlugin != null && sparkPlugin.isEnabled()) {
+            spark = true;
+
+            try {
+                Class.forName("me.lucko.spark.api.Spark");
+            } catch (ClassNotFoundException e) {
+                getLogger().log(Level.SEVERE, "You are using a corrupted version of Spark. Please download it from the official website.");
+                e.printStackTrace();
+            }
         }
 
         try {
-            BeamServerBukkitManager.registerSpark();
+            if(isSpark()) {
+                BeamServerBukkitManager.registerSpark();
+            }
             BeamServerBukkitManager.registerBukkit();
         } catch (MalformedObjectNameException | NotCompliantMBeanException | InstanceAlreadyExistsException | MBeanRegistrationException | InstanceNotFoundException e) {
             e.printStackTrace();
@@ -36,13 +46,19 @@ public class SparkToJMXSpigot extends JavaPlugin implements CacheUpdater {
     }
 
     public void updateCacheAsync() {
-        SparkAdapter.getInstance().updateTPS();
-        SparkAdapter.getInstance().updateMSPT();
+        if(isSpark()) {
+            SparkAdapter.getInstance().updateTPS();
+            SparkAdapter.getInstance().updateMSPT();
+        }
     }
 
     public void updateCacheSync() {
         BukkitAdapter.getInstance().updateOnlinePlayers();
         BukkitAdapter.getInstance().updateScheduler();
         BukkitAdapter.getInstance().updateWorld();
+    }
+
+    public boolean isSpark() {
+        return spark;
     }
 }
