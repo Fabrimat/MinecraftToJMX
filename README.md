@@ -1,9 +1,9 @@
 # MinecraftToJMX
 Bukkit/Bungee plugin to send Minecraft data to JMX
 
-##Spigot
+## Spigot
 The following beams are available when using Spigot or one of its forks
-###Bukkit Beam
+### Bukkit Beam
 Name: `me.fabrimat.minecrafttojmx:type=BukkitJMX`
 
 | Name | Type | Description |
@@ -13,7 +13,7 @@ Name: `me.fabrimat.minecrafttojmx:type=BukkitJMX`
 | SchedulerPendingTasks  | int | Amount of pending tasks in the Bukkit scheduler. |
 | WorldChunkLoaded  | int | Total amount of chunks loaded in the server. |
 | WorldEntities  | int | Total amount of entities loaded in the server. |
-###Spark Beam
+### Spark Beam
 Name: `me.fabrimat.minecrafttojmx:type=SparkJMX`
 
 | Name | Type |
@@ -25,10 +25,10 @@ Name: `me.fabrimat.minecrafttojmx:type=SparkJMX`
 | TpsLast15Min  | double |
 | MSPTLast10Sec  | double |
 | MSPTLast1Min  | double |
-##Bungeecord
+## Bungeecord
 The following beams are available when using Bungeecord or one of its forks
 
-###Bungee Beam
+### Bungee Beam
 Name: `me.fabrimat.minecrafttojmx:type=BungeeJMX`
 
 | Name | Type |
