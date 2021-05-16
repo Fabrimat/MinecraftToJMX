@@ -1,6 +1,6 @@
 package me.fabrimat.minecrafttojmx.bungee.jmx.bungee;
 
-import org.bukkit.Bukkit;
+import net.md_5.bungee.api.ProxyServer;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -24,7 +24,7 @@ public class BungeeAdapter {
     }
 
     public void updateOnlinePlayers() {
-        connectedPlayers.set(Bukkit.getServer().getOnlinePlayers().size());
+        connectedPlayers.set(ProxyServer.getInstance().getOnlineCount());
     }
 
     public int getConnectedPlayers() {
