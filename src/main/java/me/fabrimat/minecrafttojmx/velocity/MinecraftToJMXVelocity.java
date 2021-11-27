@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 
-@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.3-SNAPSHOT", authors = {"Fabrimat"})
+@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.4-SNAPSHOT", authors = {"Fabrimat"})
 public class MinecraftToJMXVelocity implements CacheUpdater {
     
     private static ProxyServer server;
