@@ -13,18 +13,18 @@ public class VelocityJMX implements VelocityJMXMXBeans {
     private final MBeanOperationInfo[] dOperations = new MBeanOperationInfo[0];
     private MBeanInfo dMBeanInfo = null;
 
-    private final VelocityAdapter bungeeAdapter;
+    private final VelocityAdapter velocityAdapter;
 
     public VelocityJMX() {
         buildDynamicMBeanInfo();
-        bungeeAdapter = VelocityAdapter.getInstance();
+        velocityAdapter = VelocityAdapter.getInstance();
     }
 
     @Override
     public Object getAttribute(String s) throws AttributeNotFoundException, MBeanException, ReflectionException {
         switch(s) {
-            case "ConnectedPlayers":
-                return this.getConnectedPlayers();
+            case "PlayerCount":
+                return this.getPlayerCount();
             default:
                 throw new AttributeNotFoundException("Attribute not found " + s);
         }
@@ -56,9 +56,9 @@ public class VelocityJMX implements VelocityJMXMXBeans {
         Descriptor descriptor = new ImmutableDescriptor("interfaceClassName=me.fabrimat.minecrafttojmx.velocity.jmx.velocity.VelocityJMXMXBeans", "mxbean=true");
 
         dAttributes[0] = new MBeanAttributeInfo(
-                "ConnectedPlayers",                 // name
+                "PlayerCount",                 // name
                 "int",      // type
-                "ConnectedPlayers",  // description
+                "PlayerCount",  // description
                 true,                    // readable
                 false,                   // writable
                 false,
@@ -88,7 +88,7 @@ public class VelocityJMX implements VelocityJMXMXBeans {
     }
 
     @Override
-    public int getConnectedPlayers() {
-        return bungeeAdapter.getConnectedPlayers();
+    public int getPlayerCount() {
+        return velocityAdapter.getPlayerCount();
     }
 }

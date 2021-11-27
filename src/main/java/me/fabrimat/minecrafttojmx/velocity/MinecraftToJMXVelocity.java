@@ -40,7 +40,7 @@ public class MinecraftToJMXVelocity implements CacheUpdater {
     }
 
     public void updateCacheSync() {
-        VelocityAdapter.getInstance().updateOnlinePlayers();
+        VelocityAdapter.getInstance().updatePlayerCount();
     }
 
     @Override

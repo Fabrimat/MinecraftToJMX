@@ -8,12 +8,12 @@ public class VelocityAdapter {
 
     private static VelocityAdapter instance;
 
-    private final AtomicInteger connectedPlayers;
+    private final AtomicInteger playerCount;
 
     private VelocityAdapter() {
-        connectedPlayers = new AtomicInteger(0);
+        playerCount = new AtomicInteger(0);
 
-        updateOnlinePlayers();
+        updatePlayerCount();
     }
 
     public static VelocityAdapter getInstance() {
@@ -23,11 +23,11 @@ public class VelocityAdapter {
         return instance;
     }
 
-    public void updateOnlinePlayers() {
-        connectedPlayers.set(MinecraftToJMXVelocity.getServer().getPlayerCount());
+    public void updatePlayerCount() {
+        playerCount.set(MinecraftToJMXVelocity.getServer().getPlayerCount());
     }
 
-    public int getConnectedPlayers() {
-        return connectedPlayers.intValue();
+    public int getPlayerCount() {
+        return playerCount.intValue();
     }
 }
