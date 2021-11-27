@@ -36,3 +36,12 @@ Name: `me.fabrimat.minecrafttojmx:type=BungeeJMX`
 | Name | Type |
 | ------------- | ------------- |
 | ConnectedPlayers  | int |
+## Velocity
+The following beams are available when using Velocity
+
+### Velocity Beam
+Name: `me.fabrimat.minecrafttojmx:type=VelocityJMX`
+
+| Name | Type |
+| ------------- | ------------- |
+| PlayerCount  | int |
