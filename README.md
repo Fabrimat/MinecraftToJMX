@@ -1,5 +1,5 @@
 # MinecraftToJMX
-Bukkit/Bungee plugin to send Minecraft data to JMX
+Bukkit/Bungee/Velocity plugin to send Minecraft data to JMX for monitoring purpose
 
 ## Spigot
 The following beams are available when using Spigot or one of its forks
