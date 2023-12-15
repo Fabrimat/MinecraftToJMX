@@ -28,6 +28,6 @@ public class VelocityAdapter {
     }
 
     public int getPlayerCount() {
-        return playerCount.intValue();
+        return playerCount.get();
     }
 }

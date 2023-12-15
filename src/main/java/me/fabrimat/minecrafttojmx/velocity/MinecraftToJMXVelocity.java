@@ -11,10 +11,11 @@ import me.fabrimat.minecrafttojmx.velocity.jmx.velocity.VelocityAdapter;
 
 import javax.management.*;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.4-SNAPSHOT", authors = {"Fabrimat"})
+@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.5-SNAPSHOT", authors = {"Fabrimat"})
 public class MinecraftToJMXVelocity implements CacheUpdater {
     
     private static ProxyServer server;
@@ -30,13 +31,14 @@ public class MinecraftToJMXVelocity implements CacheUpdater {
     
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
+        getLogger().info("Plugin initialized");
         try {
             BeamServerVelocityManager.registerVelocity();
         } catch (MalformedObjectNameException | NotCompliantMBeanException | InstanceAlreadyExistsException | MBeanRegistrationException | InstanceNotFoundException e) {
-            e.printStackTrace();
+            getLogger().log(Level.SEVERE, "Error while loading plugin", e);
         }
     
-        server.getScheduler().buildTask(this, this::updateCacheSync).delay(1, TimeUnit.MINUTES);
+        server.getScheduler().buildTask(this, this::updateCacheSync).repeat(1, TimeUnit.MINUTES).schedule();
     }
 
     public void updateCacheSync() {
