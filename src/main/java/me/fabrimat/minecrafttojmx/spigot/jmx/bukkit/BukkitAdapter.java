@@ -14,6 +14,7 @@ public class BukkitAdapter {
     private final AtomicInteger schedulerPendingTasks;
     private final AtomicInteger worldChunkLoaded;
     private final AtomicInteger worldEntities;
+    private final AtomicInteger tickNumber;
 
     private BukkitAdapter() {
         onlinePlayers = new AtomicInteger(0);
@@ -21,6 +22,7 @@ public class BukkitAdapter {
         schedulerPendingTasks = new AtomicInteger(0);
         worldChunkLoaded = new AtomicInteger(0);
         worldEntities = new AtomicInteger(0);
+        tickNumber = new AtomicInteger(0);
 
         updateOnlinePlayers();
         updateScheduler();
@@ -54,6 +56,10 @@ public class BukkitAdapter {
         worldEntities.set(entities);
     }
 
+    public void updateTick() {
+        tickNumber.incrementAndGet();
+    }
+
     public int getOnlinePlayers() {
         return onlinePlayers.intValue();
     }
@@ -72,5 +78,9 @@ public class BukkitAdapter {
 
     public int getWorldEntities() {
         return worldEntities.intValue();
+    }
+
+    public int getTickNumber() {
+        return tickNumber.intValue();
     }
 }

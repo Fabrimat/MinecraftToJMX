@@ -15,7 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.5-SNAPSHOT", authors = {"Fabrimat"})
+@Plugin(id = "minecrafttojmx", name = "Minecraft To JMX", version = "0.6-SNAPSHOT", authors = {"Fabrimat"})
 public class MinecraftToJMXVelocity implements CacheUpdater {
     
     private static ProxyServer server;

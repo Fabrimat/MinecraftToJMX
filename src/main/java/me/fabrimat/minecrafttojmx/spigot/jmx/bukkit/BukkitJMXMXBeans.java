@@ -8,4 +8,5 @@ public interface BukkitJMXMXBeans extends DynamicMBean {
     int getSchedulerPendingTasks();
     int getWorldChunkLoaded();
     int getWorldEntities();
+    int getTickNumber();
 }

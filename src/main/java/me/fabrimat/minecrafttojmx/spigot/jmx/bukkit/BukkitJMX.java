@@ -8,7 +8,7 @@ public class BukkitJMX implements BukkitJMXMXBeans {
     private final String dClassName = this.getClass().getName();
 
     // internal variables for describing MBean elements
-    private final MBeanAttributeInfo[] dAttributes = new MBeanAttributeInfo[5];
+    private final MBeanAttributeInfo[] dAttributes = new MBeanAttributeInfo[6];
     private final MBeanConstructorInfo[] dConstructors = new MBeanConstructorInfo[1];
     private final MBeanOperationInfo[] dOperations = new MBeanOperationInfo[0];
     private MBeanInfo dMBeanInfo = null;
@@ -33,6 +33,8 @@ public class BukkitJMX implements BukkitJMXMXBeans {
                 return this.getWorldChunkLoaded();
             case "WorldEntities":
                 return this.getWorldEntities();
+            case "TickNumber":
+                return this.getTickNumber();
             default:
                 throw new AttributeNotFoundException("Attribute not found " + s);
         }
@@ -103,6 +105,14 @@ public class BukkitJMX implements BukkitJMXMXBeans {
                 false,                   // writable
                 false,
                 descriptor);
+        dAttributes[5] = new MBeanAttributeInfo(
+                "TickNumber",                 // name
+                "int",      // type
+                "TickNumber",  // description
+                true,                    // readable
+                false,                   // writable
+                false,
+                descriptor);
 
         // use reflection to get constructor signatures
         Constructor[] constructors = this.getClass().getConstructors();
@@ -150,5 +160,10 @@ public class BukkitJMX implements BukkitJMXMXBeans {
     @Override
     public int getWorldEntities() {
         return bukkitAdapter.getWorldEntities();
+    }
+
+    @Override
+    public int getTickNumber() {
+        return bukkitAdapter.getTickNumber();
     }
 }

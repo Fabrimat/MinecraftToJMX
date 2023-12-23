@@ -1,6 +1,6 @@
 name: MinecraftToJMX
 main: me.fabrimat.minecrafttojmx.spigot.MinecraftToJMXSpigot
-version: 0.5-SNAPSHOT
+version: 0.6-SNAPSHOT
 api-version: 1.13
 author: Fabrimat
 softdepend: [spark]

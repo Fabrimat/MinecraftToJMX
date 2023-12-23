@@ -41,8 +41,10 @@ public class MinecraftToJMXSpigot extends JavaPlugin implements CacheUpdater {
             super.onDisable();
         }
 
-        Bukkit.getScheduler().runTaskTimerAsynchronously(this, this::updateCacheAsync, 0L, 20L*60L);
-        Bukkit.getScheduler().runTaskTimer(this, this::updateCacheSync, 0L, 20L*60L);
+        Bukkit.getScheduler().runTaskTimerAsynchronously(this, this::updateCacheAsync, 0L, 20L*30L);
+        Bukkit.getScheduler().runTaskTimer(this, this::updateCacheSync, 0L, 20L*30L);
+
+        Bukkit.getScheduler().runTaskTimer(this, BukkitAdapter.getInstance()::updateTick, 0L, 1L);
     }
 
     public void updateCacheAsync() {
